@@ -19,7 +19,7 @@ const corsOptions = {
     origin : (origin, callback)=>{
         //Check if the request ing origin is in our list of allowed origins
         if(allowedOrigins.includes(origin) || !origin){
-            //Allow acces
+           //Allow acces
             callback(null,true);
         }else{
             //Block access

@@ -9,7 +9,7 @@ router.get("/example", (req, res)=>{
 
 router.get("/task",async (req, res)=>{
     try{
-        const task = await Task.find();
+        const task = await Task.find().sort({updatedAt: -1});
         res.json(task);
     }catch(error){
         res.status(500).json({message : error.message})
